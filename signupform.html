@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>Document</title>
+	<link href="css/signupform.css" rel="stylesheet">
+
+</head>
+<body>
+	<div id="form">
+	<form name="gaip" action="#" method="post">	
+		<h2>회원 가입 양식</h2>
+		<fieldset>
+			<legend class="hidden">개인정보(필수)</legend>
+			<div>
+				<label for="name">이름</label>
+				<input type="text" name="name" id="name" required autofocus placeholder="이름입력해주세요">
+				<!-- placeholder : 필드안에 작성할 수 있는 짧은 도움말 -->
+				<!-- for 값과 id 값이 동일하면 이름만 클릭했을 때 필드안으로 커서 적용됨 -->
+			</div>	
+			<div>
+				<label for="password">비밀번호</label>
+				<input type="password" name="password" id="password" required>
+				<!-- required : 필수입력 -->
+			</div>
+			<div>
+				<label for="tel">전화번호</label>
+				<input type="text" name="tel" id="tel" required>
+			</div>	
+			<div>
+				<label for="addr">주소</label>
+				<input type="text" name="address" id="addr" required>
+				<input type="button" class="address"  value="주소찾기">
+			</div>	
+		</fieldset>
+
+		<div class="hobby">
+			<span class="form_title">취미</span>
+			<label> 
+				<input type="radio" name="hobby" value="movie" checked>
+				<span class="value">영화감상</span>
+			</label>
+			<label>
+				<input type="radio" name="hobby" value="game">
+				<span class="value">게임</span>
+			</label>
+			<label>
+				<input type="radio" name="hobby" value="요리">
+				<span class="value">요리</span>
+			</label>
+		</div>
+		<div class="dessert">
+			<span class="form_title">디저트</span>
+			<label>
+				<input type="checkbox" name="drink" value="coffee">
+				<span class="value">커피</span>
+			</label>
+			<label>
+				<input type="checkbox" name="drink" value="icetea">
+				<span class="value">아이스티</span>
+			</label>
+			<label>
+				<input type="checkbox" name="drink" value="latte">
+				<span class="value">라떼</spna>
+			</label>
+		</div>
+		<div>
+			<span class="form_title">기타의견</span>
+			<textarea placeholder="의견을 보내주세요"></textarea>
+		</div>
+		<div class="selectbox">
+			<label class="form_title">가입경로</label>
+			<!-- <select onchange="if(this.value) location.href=(this.value);"> 현재탭에서 -->
+			<select onchange="if(this.value) window.open(this.value);"><!-- 새탭에서 -->
+				<optgroup label="SNS">
+					<!-- label 작성안해도됨 구분짓기위해 작성 -->
+				<option value="facebook">페이스북</option>
+				<option value="kakaostory">카카오스토리</option>
+				<option value="instagram">인스타그램</option>
+				</optgroup>
+				<optgroup label="portal">
+				<option value="http://www.naver.com">다음</option>
+				<option value="naver">네이버</option>
+				<option value="google">구글</option>
+				</optgroup>
+			</select>
+		</div>
+		<div class="bottons">
+			<input type="reset" value="다시쓰기">
+			<input type="submit" value="가입하기">
+		</div>
+	</form>
+</div><!--.form end-->
+</body>
+</html>
+
+
+
+
+
+
+
